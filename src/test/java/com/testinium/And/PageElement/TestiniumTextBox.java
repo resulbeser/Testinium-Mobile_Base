@@ -23,6 +23,19 @@ public class TestiniumTextBox extends PageElementModel {
         }
     }
 
+    public void click(){
+        log.info("ABOUT TO CLICK TEXTBOX " + getLoggingName());
+        WebElement me = getAnElement();
+        try {
+            me.click();
+        } catch (Exception e) {
+            String error = "COULD NOT CLICK TEXTBOX: " + getLoggingName();
+            log.error(error);
+            throw new MobileAutomationException(error);
+        }
+    }
+
+
     public void clearText(){
         log.info("ABOUT TO CLEAR TEXTBOX " + getLoggingName());
         WebElement me = getAnElement();
