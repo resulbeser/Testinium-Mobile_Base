@@ -20,6 +20,11 @@ public class LandingPage extends TestiniumMasterPage {
     private static TestiniumTextBox TXT_LogoGirisIsim = new TestiniumTextBox(PageElementModel.selectorNames.XPATH,"//android.widget.EditText[@resource-id='input_username']");
     private static TestiniumTextBox TXT_LogoGirisSifre = new TestiniumTextBox(PageElementModel.selectorNames.XPATH,"//android.widget.EditText[@resource-id='input_password']");
     private static TestiniumSwipe SWP_GO = new TestiniumSwipe(PageElementModel.selectorNames.ID,"DUMMY");
+    private static TestiniumButton BTN_Hesabim = new TestiniumButton(PageElementModel.selectorNames.ID, "com.mobisoft.kitapyurdu:id/btn_ic_header_account");
+    private static TestiniumButton IMG_Book = new TestiniumButton(PageElementModel.selectorNames.XPATH, "(//androidx.recyclerview.widget.RecyclerView[@resource-id=\"com.mobisoft.kitapyurdu:id/recyclerViewList\"])[1]/*[1]");
+    private static TestiniumButton BTN_Anasayfa = new TestiniumButton(PageElementModel.selectorNames.ID, "com.mobisoft.kitapyurdu:id/navigation_home");
+
+
     /**
      * Verifies landing page is displayed
      */
@@ -79,5 +84,17 @@ public class LandingPage extends TestiniumMasterPage {
         } catch (Exception e) {
             log.error("Ana uygulamaya geçiş yapılamadı: " + e.getMessage());
         }*/
+    }
+
+    public static void hesabimBtn(){
+        BTN_Hesabim.click();
+    }
+
+    public static void bookImg(){
+        IMG_Book.click();
+    }
+
+    public static void anasayfaBtn(){
+        BTN_Anasayfa.click();
     }
 }

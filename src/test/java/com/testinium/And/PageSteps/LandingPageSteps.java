@@ -40,6 +40,21 @@ public class LandingPageSteps {
         LandingPage.logoIsim();
     }
 
+    @Given("Hesaba giriş işlemleri yapılır.")
+    public void clickHesabimBtn(){
+        LandingPage.hesabimBtn();
+    }
+
+    @And("İlgi Görenler bölümündeki ilk kitaba tıklanır.")
+    public void clickBookImg(){
+        LandingPage.bookImg();
+    }
+
+    @And("Ana Sayfa butonuna tıklanır.")
+    public void clickAnasayfaBtn(){
+        LandingPage.anasayfaBtn();
+    }
+
 
 
 }

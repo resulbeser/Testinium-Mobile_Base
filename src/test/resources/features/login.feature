@@ -1,6 +1,8 @@
-Feature: Mobil Uygulama Test Senaryoları
-  Background: Mobil uygulamada temel test senaryolarının çalışması
+Feature: Kitapyurdu Login Senaryoları
 
-  @tag1 @tag2
-  Scenario: Temel kontrol senaryosu
-    Given Örnek test case'i çalıştır 
+  Scenario: Kullanıcı Başarılı Giriş senaryosu
+    Given   Hesaba giriş işlemleri yapılır.
+    And     Email girilir.
+    And     Şifre girilir.
+    And     Giriş Yap butonuna tıklanır.
+    Then    Başarıyla giriş yapıldığı doğrulanır.
